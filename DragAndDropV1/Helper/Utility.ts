@@ -1,4 +1,5 @@
-import { IFile } from "../Interface/interface";
+import { mergeStyles } from "@fluentui/react/lib/Styling";
+import { IInputs } from "../generated/ManifestTypes";
 
 export namespace Utility{
     export class CrmActions 
@@ -16,11 +17,26 @@ export namespace Utility{
             }
         } 
     }
+    
+    export class Helper {
+        public static ShowAlertMessage(context: ComponentFramework.Context<IInputs>, message: string): void {
+            context.navigation.openAlertDialog({ text: message });
+        }
+    }
 
-    export class DataConverter
+    export class UserInterface
     {
-        public static ConvertFileDataToCrm(fileData: IFile) {
+        public static GetIconDesign(): string
+        {
+            const iconClass = mergeStyles({
+                fontSize: 50,
+                height: 50,
+                width: 50,
+                margin: '0 25px',
+                color: '#242424'
+              });
 
+              return iconClass
         }
     }
 }

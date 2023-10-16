@@ -34,9 +34,8 @@ export class DragAndDropV1 implements ComponentFramework.StandardControl<IInputs
         this._container = container;
         this._context = context;
         this._notifyOutputChanged = notifyOutputChanged;
-        this._dragAndDropProps = {
-            webApi: context.webAPI,
-            utility: context.utils,
+        this._dragAndDropProps = {            
+            context: context,
             isNoteAttachment: context.parameters.UploadAsNotes.raw === '1',
             referenceRecord:{
                 id: (context as any).page.entityId,

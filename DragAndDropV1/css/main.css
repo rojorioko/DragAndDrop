@@ -1,0 +1,18 @@
+.center-align {
+    width: 100%;
+    text-align: center
+}
+
+#div-main-dragdrop {
+ margin: 10px;
+ padding: 10px;
+ border: solid 1px #D8D8D8; 
+ flex-flow: column;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.div-main-activedrag {
+background-color: #F5F5F5;
+}

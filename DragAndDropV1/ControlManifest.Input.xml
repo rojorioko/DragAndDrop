@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="DragAndDropV1" constructor="DragAndDropV1" version="0.0.16" display-name-key="DragAndDropV1" description-key="DragAndDropV1 description" control-type="standard">
+  <control namespace="DragAndDropV1" constructor="DragAndDropV1" version="0.0.22" display-name-key="DragAndDropV1" description-key="DragAndDropV1 description" control-type="standard">
     <external-service-usage enabled="false">
     </external-service-usage>
     <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="TextGroup" usage="bound" required="true" />
@@ -16,8 +16,8 @@
     </property>
     <resources>
       <code path="index.ts" order="1" />
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
-      <css path="css/DragAndDropV1.css" order="1" />
+      <css path="css/main.css" order="1" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES      
       <resx path="strings/DragAndDropV1.1033.resx" version="1.0.0" />
       -->
     </resources>

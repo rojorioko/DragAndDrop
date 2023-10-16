@@ -1,7 +1,8 @@
+import { IInputs } from "../generated/ManifestTypes"
+
 export interface IDragAndDropProps
-{
-    webApi: ComponentFramework.WebApi,
-    utility: ComponentFramework.Utility,
+{    
+    context: ComponentFramework.Context<IInputs>,
     referenceRecord: ComponentFramework.LookupValue,
     isNoteAttachment: boolean
 }
@@ -13,6 +14,12 @@ export interface IFile
  size: number,
  path: string,
  lastModifiedDate: Date
+}
+
+export interface ICrmFile
+{
+ file: IFile,
+ content: string
 }
 
 export interface ICrmAttachment

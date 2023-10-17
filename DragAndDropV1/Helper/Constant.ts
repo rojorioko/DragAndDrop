@@ -16,6 +16,6 @@ export class Constant
     //#region Labels
     public static LabelLoadingText = "Uploading Files";
     public static LabelErrorMessage = "Error reading file.";
-    public static LabelDropFile = "Drag and drop files here.";
+    public static LabelDropFile = "DragDrop_Display_Key";
     //#endregion
 }

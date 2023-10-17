@@ -1,25 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="DragAndDropV1" constructor="DragAndDropV1" version="0.0.22" display-name-key="DragAndDropV1" description-key="DragAndDropV1 description" control-type="standard">
+  <control namespace="DragAndDropV1" constructor="DragAndDropV1" version="0.0.24" display-name-key="DragAndDropV1" description-key="DragAndDropV1 description" control-type="standard">
     <external-service-usage enabled="false">
     </external-service-usage>
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="TextGroup" usage="bound" required="true" />
+    <property name="DragDropInput" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="TextGroup" usage="bound" required="true" />
     <type-group name="TextGroup">
       <type>SingleLine.Text</type>
       <type>SingleLine.Phone</type>
       <type>SingleLine.Email</type>
       <type>TwoOptions</type>
     </type-group>
-    <property name="UploadAsNotes" display-name-key="UploadAsNotes" description-key="Upload the target files as Notes attachment. No value should only be selected for Email and Appointment" usage="input" required="true" of-type="Enum">
+    <property name="UploadAsNotes" display-name-key="UploadAsNotes_Display_Key" description-key="UploadAsNotes_Desc_Key" usage="input" required="true" of-type="Enum">
       <value name="No" display-name-key="No">0</value>
       <value name="Yes" display-name-key="Yes" default="true">1</value>
     </property>
     <resources>
       <code path="index.ts" order="1" />
       <css path="css/main.css" order="1" />
-      <!-- UNCOMMENT TO ADD MORE RESOURCES      
       <resx path="strings/DragAndDropV1.1033.resx" version="1.0.0" />
-      -->
     </resources>
     <feature-usage>
       <!-- <uses-feature name="Device.captureAudio" required="true" />

@@ -54,9 +54,7 @@ const FileUpload = (props: IDragAndDropProps) =>  {
         setUploadCount(prevCount => prevCount + 1);
         const file = acceptedFiles[i] as IFile;        
         const dataOnly = (await readFileContent(file)) as string;              
-        await uploadSelectedFilesToCrm(file, dataOnly);      
-        //await testApi(file, dataOnly);      
-        console.log(`Uploaded ${uploadCount}. Count ${selectedFiles.length}`)          
+        await uploadSelectedFilesToCrm(file, dataOnly);                        
     }
     
     resetState();
@@ -112,12 +110,7 @@ const FileUpload = (props: IDragAndDropProps) =>  {
           }      
 
           fileReader.readAsDataURL(inputFile as any);
-    })
-    const testApi = async (file: IFile, fileContent: string) => new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('done');
-        }, 1000);
-    })
+    })   
 //#endregion
 
   return (
@@ -132,7 +125,7 @@ const FileUpload = (props: IDragAndDropProps) =>  {
               <div>
                 <FontIcon aria-label='BulkUpload' iconName='BulkUpload' className={Utility.UserInterface.GetIconDesign()}/>
                 <input {...getInputProps()} />
-                <Label className={Constant.CenterAlign}>{Constant.LabelDropFile}</Label>  
+                <Label className={Constant.CenterAlign}>{props.context.resources.getString(Constant.LabelDropFile)}</Label>  
             </div>
             )
           }                                    

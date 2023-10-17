@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
 
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
@@ -50,15 +49,8 @@ export class DragAndDropV1 implements ComponentFramework.StandardControl<IInputs
      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
      */
     public updateView(context: ComponentFramework.Context<IInputs>): void
-    {
-        // Add code to update control view    
-        // ReactDOM.render(
-        //     React.createElement(UseEffectDemo),
-        //     this._container
-        //   ); 
-            
-          const root = createRoot(this._container);
-          
+    {        
+          const root = createRoot(this._container);          
           root.render(React.createElement(FileUpload, this._dragAndDropProps))
     }
 

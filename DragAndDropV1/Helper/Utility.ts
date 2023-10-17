@@ -1,5 +1,6 @@
 import { mergeStyles } from "@fluentui/react/lib/Styling";
 import { IInputs } from "../generated/ManifestTypes";
+import { IFile } from "../Interface/interface";
 
 export namespace Utility{
     export class CrmActions 
@@ -21,6 +22,18 @@ export namespace Utility{
     export class Helper {
         public static ShowAlertMessage(context: ComponentFramework.Context<IInputs>, message: string): void {
             context.navigation.openAlertDialog({ text: message });
+        }
+        //Use this for local testing. Replace CRM Create call with this function.
+        public static TestApi (): Promise<ComponentFramework.LookupValue> { 
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let samplData: ComponentFramework.LookupValue = {
+                        id: '1',
+                        entityType: 'dummy'
+                    }
+                    resolve(samplData);
+                }, 1000);
+            })
         }
     }
 
